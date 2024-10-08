@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="asset/css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
 </head>
 <body>
     <!-- Container Start -->
@@ -26,7 +27,6 @@
                     <li><a href=""><i class="fa fa-list"></i>Dự án</a></li>
                     <li><a href=""><i class="fa fa-briefcase"></i>Port</a></li>
                     <li><a href=""><i class="fa fa-comments"></i>Liên hệ</a></li>
-
                 </ul>
             </div>
         <!-- Aside End -->
@@ -39,22 +39,25 @@
                         <div class="home-info padd-15">
                             <h3 class="hello">Xin chào, tôi là<span class="name">KT</span></h3>
                             <h3 class="my-profession">Tôi là sinh viên ngành <span class="typing">Web</span></h3>
-                            <p>ac vb dfgh dfgh ẻty fgh fghj dfghj rtyẻtyh tyh rfgh rty yu ẻty ẻt ẻty ẻtya sdf fg yui rt45 6...</p>
+                            <p class="intro">I'm a web designer with extensive experience for over 10 years. My expertise is to create and website design, graphic design, and many more...</p>
                             <a href="#contact" class="btn hire-me">Liên hệ</a>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="asset/img/tako1.png" alt="me">
-                        </div>
+                            <img id="tako" src="asset/img/tako.png" alt="tako">
+                            <img id="tako-gif" src="asset/img/tako2.gif" alt="feed the tako" style="display:none;">
+                            <img id="tako2" src="asset/img/tako2.png" alt="tako2" style="display:none;">
+                            <div id="feed-tako" style="display:none;">Feed the Tako</div>
+                        </div>                        
+                                              
                     </div>
                 </div>
              </section>
             <!-- Home section end -->
-
           </div>
          <!-- Main End -->
      </div>
     <!-- Container End -->
     <!-- JS -->
-     <script src="js/script.js"></script>
+     <script src="asset/js/script.js"></script>
 </body>
 </html>
