@@ -297,6 +297,7 @@ h3.my-profession
     border-radius: 5px;    
     height: 400px;
 }
+
 .home .home-img {
     display: flex;
     justify-content: center;
@@ -304,7 +305,7 @@ h3.my-profession
     position: relative;
 }
 
-#tako, #tako-gif, #tako2 {
+#tako, #tako-gif, #tako3, #tako-eat {
     position: relative;
     width: 200px; /* Kích thước ban đầu lớn hơn */
     height: 200px;
@@ -313,9 +314,41 @@ h3.my-profession
 
 #feed-tako {
     font-size: 24px;
-    color: red;
+    color: #fff;
     text-align: center;
-    margin-top: 10px;
+    background-color: #000; /* Màu nền cho khung thoại */
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #fff; /* Đường viền trắng */
+    max-width: 200px;
+    position: absolute;
+    top: -40px; /* Điều chỉnh vị trí trên đầu tako3 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Ẩn ban đầu */
+}
+
+#feed-tako::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
+#feed-tako::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    transform: translateX(-50%);
+    margin-top: -2px;
 }
 
 .word {
