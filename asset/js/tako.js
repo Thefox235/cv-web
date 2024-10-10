@@ -21,7 +21,7 @@ let takoSize = { width: 200, height: 200 }; // Initial size
 // Show GIF and then tako3 after several clicks
 function handleClick() {
     clickCount++;
-    if (clickCount >= 3) {
+    if (clickCount >= 1) {
         gsap.to(tako, { width: 100, height: 100, duration: 0.5, onComplete: () => {
             tako.style.display = 'none';
             takoGif.style.display = 'block';
@@ -32,7 +32,7 @@ function handleClick() {
                 tako3.style.display = 'block';
                 enableDragging();
                 tako3.addEventListener('click', showFeedTakoText);
-            }, 3000); // Adjust timing as needed
+            }, 2000); // Adjust timing as needed
 
             // Transform words into cookies
             transformWordsToCookies();
@@ -80,7 +80,7 @@ function enableDragging() {
                             takoSize.height = tako3.clientHeight;
                         }});
 
-                        if (wordCount >= 5) {
+                        if (wordCount >= 3) {
                             tako3.style.display = 'none';
                             tako.style.display = 'block';
                             tako.style.width = `${takoSize.width}px`;

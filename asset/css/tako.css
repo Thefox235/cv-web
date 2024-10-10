@@ -1,0 +1,70 @@
+.home .home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#tako, #tako-gif, #tako3, #tako-eat {
+    position: relative;
+    width: 200px; /* Kích thước ban đầu lớn hơn */
+    height: 200px;
+    transition: all 0.2s ease-in-out;
+}
+
+#feed-tako {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    background-color: #000; /* Màu nền cho khung thoại */
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #fff; /* Đường viền trắng */
+    max-width: 200px;
+    position: absolute;
+    top: -40px; /* Điều chỉnh vị trí trên đầu tako3 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Ẩn ban đầu */
+}
+
+#feed-tako::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
+#feed-tako::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    transform: translateX(-50%);
+    margin-top: -2px;
+}
+
+.word {
+    cursor: grab;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    position: relative;
+    user-select: none;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.cookie {
+    background: url('./../img/cookie.png') no-repeat center center / contain;
+    width: 30px; /* Kích thước phù hợp với thiết kế của bạn */
+    height: 30px;
+    color: transparent; /* Ẩn văn bản */
+    display: inline-block;
+}
