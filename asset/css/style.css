@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;700;1,300&display=swap');
 
 
 :root{
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
-    --text-black-900: #302e4c;
+    --text-black-900: #302e4d;
     --text-black-700:#504e70;
-
 }
 
 body{
-    line-height: 16px;
+    line-height: 1.5;
     font-size: 16px;
     /* font-family: 'Poppins', sans-serif; */
 }
@@ -38,10 +37,10 @@ ul
     padding: 0 30px;
     opacity: 1;
 }
-.hidden
+/* .hidden
 {
     display: none !important;
-}
+} */
 .main-content
 {
     padding-left: 270px;
@@ -121,6 +120,10 @@ ul
 .btn:hover
 {
     transform: scale(1.05);
+}
+.shadow-dark
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 /* header */
 header{
@@ -272,7 +275,7 @@ header{
 h3.hello
 {
     font-size: 28px;
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 h3.hello span
@@ -286,7 +289,7 @@ h3.hello span
 h3.my-profession
 {
     font-size: 30px;
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 .typing
@@ -377,9 +380,119 @@ h3.my-profession
  max-width: 60%; 
  margin-top: 40px;
 }
+.about .about-content .personal-info .info-item
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.about .about-content .personal-info .info-item p
+{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+.about .about-content .personal-info .info-item p span
+{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .personal-info .buttons
+{
+    margin-top: 30px;
+}
+.about .about-content .personal-info .buttons .btn
+{
+    margin-right: 15px;
+    margin-top: 10px;
+}
 .about .about-content .skills
 {
  flex: 0 0 40%;
  max-width: 40%;
  margin-top: 40px;
+}
+.about .about-content .skills .skill-item
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .skills .skill-item h5
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.about .about-content .skills .skill-item .progress
+{
+    background-color: var(--bg-black-50);
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .skills .skill-item 
+{
+    margin-bottom: 25px;
+}
+.about .about-content .skills .skill-item .progress .progress-in
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--skin-color);
+}
+.about .about-content .skills .skill-item .skill-percent
+{
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-weight: 400;
+    color: var(--text-black-900);
+    line-height: 40px;
+}
+.about .about-content .education,
+.about .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.about .about-content h3.title
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline-box
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .timeline 
+{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .timeline .timeline-item
+{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.about .about-content .timeline .timeline-item:last-child
+{
+    padding-bottom: 0;
 }
