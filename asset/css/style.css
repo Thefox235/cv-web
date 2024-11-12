@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;700;1,300&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=MedievalSharp&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 :root{
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
@@ -164,7 +162,7 @@ header{
     position: relative;
 }
 .aside .logo a span{
-    font-family: 'Clicker Script', cursive;
+    font-family: 'MedievalSharp', cursive;
     font-size: 40px;
 }
 
@@ -280,7 +278,7 @@ h3.hello
 
 h3.hello span
 {
-    font-family: 'Clicker Script', cursive;
+    font-family: 'MedievalSharp', cursive;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-color);
@@ -295,6 +293,7 @@ h3.my-profession
 .typing
 {
     color: var(--skin-color);
+    font-family: 'MedievalSharp', cursive;
 }
 .home-info p
 {
@@ -400,6 +399,7 @@ h3.my-profession
     margin-left: 4px;
     display: inline-block;
 }
+
 .about .about-content .personal-info .buttons
 {
     margin-top: 30px;
@@ -789,3 +789,5 @@ h3.my-profession
         max-width: 100%;
     }
 }
+
+/* button */
