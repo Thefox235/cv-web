@@ -5,6 +5,12 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700:#504e70;
+    --gradient-color: linear-gradient(90deg,
+                      hsl(48, 100%, 50%) 0%,
+                      hsl(28, 100% ,54%, 100%));
+    --black-color:hsl(225, 15%, 6%);
+    --reflection-color: hsla(48, 30%, 95%, .3);
+    --body--color: hsl(48, 100%, 98%);
 }
 
 body{
@@ -800,3 +806,132 @@ h3.my-profession
 }
 
 /* button */
+/* .container-button
+{
+   
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+} */
+
+.button{
+    position: relative;
+    transition: transform .4s;
+    display: flex;
+}
+.button__content
+{
+    position: relative;
+    background: var(--gradient-color);
+    padding: 1.25rem 3rem;
+    border-radius: 4rem;
+    border: 3px solid var(--black-color);
+    color: var(--black-color);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    overflow: hidden;
+}
+
+.button__text
+{
+    font-weight: 700;
+}
+.button__icon
+{
+    position: relative;
+}
+.button__text,
+.button__icon{
+    position: relative;
+    z-index: 2;
+}
+.button__reflection-1,
+.button__reflection-2
+{
+    width: 8px;
+    height: 120px;
+    background-color: var(--reflection-color);
+    rotate: 30deg;
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: -180%;
+    margin: auto;
+    transition: left .6s cubic-bezier(.2, .5, .2, 1.2);
+}
+
+.button__reflection-1::after
+{
+    content: '';
+    width: 26px;
+    height: 100%;
+    background-color: var(--reflection-color);
+    position: absolute;
+    top: -1rem;
+    left: 1.25rem;
+
+}
+.button__reflection-2::after
+{
+    content: '';
+    width: 26px;
+    height: 100%;
+    background-color: var(--reflection-color);
+    position: absolute;
+    top: -1rem;
+    left: 8rem;
+
+}
+
+.button img{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .5s, opacity .5s;
+}
+.button__star-1
+{
+    width: 20px;
+    top: -14px;
+    left: -16px;
+    transform: rotate(48deg);
+}
+.button__star-2
+{
+    width: 40px;
+    right: -10px;
+    top: -4px;
+    transform: rotate(-48deg);
+}
+.button_-circle-1,
+.button__circle-2
+{
+    width: 8px;
+}
+
+.button_-circle-1
+{
+    top: -8px;
+    left: 58px;
+}
+.button_-circle-2
+{
+    top: 34px;
+    left: -8px;
+    transform: scale(.1);
+}
+.button_diamond{
+    width: 18px;
+    top: -18px;
+    right:62px;
+    transform: scale(.1);
+}
+
+.button__triangle
+{
+    width: 30px;
+    left: 15px;
+    bottom: -16px;
+    transform: rotate(-48deg) scale(.1);
+}
