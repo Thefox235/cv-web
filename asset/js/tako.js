@@ -22,6 +22,7 @@ let takoSize = { width: 200, height: 200 }; // Initial size
 let takoHP = 100;
 const hpBar = document.querySelector('.hp-bar');
 const hpBarInner = document.getElementById('hp-bar-inner');
+let isTransformedBack = false; // Biến để theo dõi trạng thái biến đổi trở lại
 
 // Cập nhật HP
 function updateHP(amount) {
@@ -54,7 +55,11 @@ hpBar.style.display = 'none';
 function hitTako() {
     hpBar.style.display = 'block';
     reduceHP();
-    playGifAnimation(); // Chạy animation takogif khi đánh
+    if (isTransformedBack) {
+        playGifAnimationForTako();
+    } else {
+        playGifAnimation();
+    }
 }
 
 // Sự kiện click đầu tiên vào Tako
@@ -132,7 +137,10 @@ function enableDragging() {
                             tako.style.display = 'block';
                             tako.style.width = `${takoSize.width}px`;
                             tako.style.height = `${takoSize.height}px`;
+                            isTransformedBack = true; // Đánh dấu đã biến đổi trở lại
                             enableDraggingForTako();
+                            // Gắn lại sự kiện click cho tako sau khi trở lại
+                            tako.addEventListener('click', hitTako);
                         }
                     });
                 }
@@ -167,6 +175,16 @@ function playGifAnimation() {
     }, 1000); // Thời gian chạy animation có thể điều chỉnh
 }
 
+function playGifAnimationForTako() {
+    tako.style.display = 'none';
+    takoGif.style.display = 'block';
+
+    setTimeout(() => {
+        takoGif.style.display = 'none';
+        tako.style.display = 'block';
+    }, 1000); // Thời gian chạy animation có thể điều chỉnh
+}
+
 function enableDraggingForTako() {
     const words = document.querySelectorAll('.cookie');
     words.forEach(word => {
@@ -192,5 +210,6 @@ function enableDraggingForTako() {
         });
     });
 }
+
 
 

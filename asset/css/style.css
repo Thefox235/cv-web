@@ -6,8 +6,8 @@
     --text-black-900: #302e4d;
     --text-black-700:#504e70;
     --gradient-color: linear-gradient(90deg,
-                      hsl(269,13%,48%)0%,
-                      hsl(268,16%,61%));
+                      hsl(288,32%,54%)0%,
+                      hsl(336,100%,90%));
     --black-color:hsl(225, 15%, 6%);
     --reflection-color: hsla(48, 30%, 95%, .3);
     --body--color: hsl(48, 100%, 98%);
@@ -823,10 +823,10 @@ h3.my-profession
 {
     position: relative;
     background: var(--gradient-color);
-    padding: 1.25rem 3rem;
+    padding: 0.75rem 3rem;
     border-radius: 4rem;
     border: 3px solid var(--black-color);
-    color: var(--black-color);
+    color: #392467;
     display: flex;
     align-items: center;
     column-gap: .5rem;
