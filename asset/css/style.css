@@ -12,7 +12,20 @@
     --reflection-color: hsla(48, 30%, 95%, .3);
     --body--color: hsl(48, 100%, 98%);
 }
-
+body.dark
+{
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700:#e9e9e9;
+    --gradient-color: linear-gradient(90deg,
+                      hsl(288,32%,54%)0%,
+                      hsl(336,100%,90%));
+    --black-color:hsl(0, 0%, 100%);
+    --reflection-color: hsla(48, 30%, 95%, .3);
+    --body--color: hsl(48, 100%, 98%);
+}
 body{
     line-height: 1.5;
     font-size: 16px;
