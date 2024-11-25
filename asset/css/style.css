@@ -561,6 +561,11 @@ h3.my-profession
     text-align: justify;
     color: var(--text-black-700);
 }
+.about .about-content .timeline ul li
+{
+    color: var(--text-black-700);
+}
+
 .about .about-content .timeline .timeline-text ul {
     list-style-type: disc; /* Kiểu dấu đầu dòng cho danh sách */
     margin-left: 20px; /* Khoảng cách từ lề trái */
@@ -568,6 +573,7 @@ h3.my-profession
 
 .about .about-content .timeline .timeline-text ul li {
     margin-bottom: 5px; /* Khoảng cách giữa các mục danh sách */
+   
 }
 
 /* Service */
